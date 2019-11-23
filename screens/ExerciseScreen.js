@@ -41,7 +41,10 @@ export default function ExerciseScreen() {
         </TouchableOpacity>
         <TouchableOpacity style={styles.exercise}>
           <Image
-            style={{width: 150, height: 150}}
+            style={{
+              width: 150,
+              height: 150,
+            }}
             source={require('./../assets/images/basketball.png')}
           />
         </TouchableOpacity>
@@ -69,6 +72,5 @@ const styles = StyleSheet.create({
   exercise: {
     width: 150,
     height: 150,
-    borderRadius: 3,
   },
 });

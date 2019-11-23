@@ -10,15 +10,16 @@ import {
 
 const ListItems = () => {
   const [items, setItems] = useState([
-    'Value 1',
-    'Value 2',
-    'Value 3',
-    'Value 4',
-    'Value 5',
-    'Value 6',
-    'Value 7',
-    'Value 8',
-    'Value 9',
+    'Nvember 14, 2019',
+    'Nvember 15, 2019',
+    'Nvember 16, 2019',
+    'Nvember 17, 2019',
+    'Nvember 18, 2019',
+    'Nvember 19, 2019',
+    'Nvember 20, 2019',
+    'Nvember 21, 2019',
+    'Nvember 22, 2019',
+    'Nvember 23, 2019',
   ]);
 
   return (
