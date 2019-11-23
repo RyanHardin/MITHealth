@@ -1,26 +1,74 @@
 import React from 'react';
-import {View, ScrollView, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 
 export default function ExerciseScreen() {
   return (
     <View style={styles.container}>
-      <ScrollView>
-        <Text>Exercise Screen</Text>
-      </ScrollView>
+      <View style={styles.exContainer}>
+        <TouchableOpacity style={styles.exercise}>
+          <Image
+            style={{width: 150, height: 150}}
+            source={require('./../assets/images/airhockey.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.exercise}>
+          <Image
+            style={{width: 150, height: 150}}
+            source={require('./../assets/images/pool.jpeg')}
+          />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.exContainer}>
+        <TouchableOpacity style={styles.exercise}>
+          <Image
+            style={{width: 150, height: 150}}
+            source={require('./../assets/images/Blocks.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.exercise}>
+          <Image
+            style={{width: 150, height: 150}}
+            source={require('./../assets/images/drumming.png')}
+          />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.exContainer}>
+        <TouchableOpacity style={styles.exercise}>
+          <Image
+            style={{width: 150, height: 150}}
+            source={require('./../assets/images/pingpong.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.exercise}>
+          <Image
+            style={{width: 150, height: 150}}
+            source={require('./../assets/images/basketball.png')}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
 
 ExerciseScreen.navigationOptions = {
-  title: 'Exercise',
+  title: 'Exercises',
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'space-evenly',
     paddingTop: 15,
     backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
+  },
+
+  exContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+  exercise: {
+    width: 150,
+    height: 150,
+    borderRadius: 3,
   },
 });
