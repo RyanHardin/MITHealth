@@ -10,16 +10,16 @@ import {
 
 const ListItems = () => {
   const [items, setItems] = useState([
-    'Nvember 14, 2019',
-    'Nvember 15, 2019',
-    'Nvember 16, 2019',
-    'Nvember 17, 2019',
-    'Nvember 18, 2019',
-    'Nvember 19, 2019',
-    'Nvember 20, 2019',
-    'Nvember 21, 2019',
-    'Nvember 22, 2019',
-    'Nvember 23, 2019',
+    'Nvember 14, 2019    Score : 98',
+    'Nvember 15, 2019    Score : 65',
+    'Nvember 16, 2019    Score : 79',
+    'Nvember 17, 2019    Score : 32',
+    'Nvember 18, 2019    Score : 43',
+    'Nvember 19, 2019    Score : 79',
+    'Nvember 20, 2019    Score : 97',
+    'Nvember 21, 2019    Score : 98',
+    'Nvember 22, 2019    Score : 90',
+    'Nvember 23, 2019    Score : 87',
   ]);
 
   return (
@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     width: '80%',
     borderRadius: 5,
     borderWidth: 2,
-    borderColor: 'black',
+    borderColor: '#fff',
+    backgroundColor: 'rgb(132,198,166)',
     padding: 20,
     marginVertical: 15,
     marginLeft: 45,
@@ -47,6 +48,8 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 15,
+    textAlign: 'center',
+    color: '#fff',
   },
 });
 

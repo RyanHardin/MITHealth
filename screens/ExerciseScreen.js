@@ -28,7 +28,7 @@ export default function ExerciseScreen() {
         <TouchableOpacity style={styles.exercise}>
           <Image
             style={{width: 150, height: 150}}
-            source={require('./../assets/images/drumming.png')}
+            source={require('./../assets/images/pingpong.png')}
           />
         </TouchableOpacity>
       </View>
@@ -36,7 +36,7 @@ export default function ExerciseScreen() {
         <TouchableOpacity style={styles.exercise}>
           <Image
             style={{width: 150, height: 150}}
-            source={require('./../assets/images/pingpong.png')}
+            source={require('./../assets/images/drumming.png')}
           />
         </TouchableOpacity>
         <TouchableOpacity style={styles.exercise}>

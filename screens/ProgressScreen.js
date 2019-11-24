@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     flex: 2,
-    backgroundColor: '#ccc',
+    backgroundColor: 'rgb(27, 33, 44)',
     justifyContent: 'center',
     alignItems: 'stretch',
   },

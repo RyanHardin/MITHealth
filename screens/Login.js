@@ -9,6 +9,10 @@ const Login = () => {
   );
 };
 
+Login.navigationOptions = {
+  title: 'Login',
+};
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
