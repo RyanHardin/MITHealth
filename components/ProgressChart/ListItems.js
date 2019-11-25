@@ -9,27 +9,58 @@ import {
 } from 'react-native';
 
 const ListItems = () => {
-  const [items, setItems] = useState([
-    'Nvember 14, 2019    Score : 98',
-    'Nvember 15, 2019    Score : 65',
-    'Nvember 16, 2019    Score : 79',
-    'Nvember 17, 2019    Score : 32',
-    'Nvember 18, 2019    Score : 43',
-    'Nvember 19, 2019    Score : 79',
-    'Nvember 20, 2019    Score : 97',
-    'Nvember 21, 2019    Score : 98',
-    'Nvember 22, 2019    Score : 90',
-    'Nvember 23, 2019    Score : 87',
-  ]);
+  const DATA = [
+    {
+      date: 'November 1, 2019    Score : 98',
+      id: '1',
+    },
+    {
+      date: 'November 3, 2019    Score : 65',
+      id: '2',
+    },
+    {
+      date: 'November 6, 2019    Score : 79',
+      id: '3',
+    },
+    {
+      date: 'November 7, 2019    Score : 32',
+      id: '4',
+    },
+    {
+      date: 'November 8, 2019    Score : 43',
+      id: '5',
+    },
+    {
+      date: 'November 12, 2019    Score : 79',
+      id: '6',
+    },
+    {
+      date: 'November 15, 2019    Score : 97',
+      id: '7',
+    },
+    {
+      date: 'November 16, 2019    Score : 98',
+      id: '8',
+    },
+    {
+      date: 'November 20, 2019    Score : 90',
+      id: '9',
+    },
+    {
+      date: 'November 25, 2019    Score : 87',
+      id: '10',
+    },
+  ];
 
   return (
     <FlatList
-      data={items}
-      renderItem={itemData => (
-        <TouchableOpacity style={styles.listItems}>
-          <Text style={styles.text}>{itemData.item}</Text>
+      data={DATA}
+      renderItem={({item}) => (
+        <TouchableOpacity style={styles.listItems} id={item.id}>
+          <Text style={styles.text}>{item.date}</Text>
         </TouchableOpacity>
       )}
+      keyExtractor={item => item.id}
     />
   );
 };

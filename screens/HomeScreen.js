@@ -1,6 +1,13 @@
 import React from 'react';
 import {Ionicons} from '@expo/vector-icons';
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 
 const HomeScreen = () => {
   return (
@@ -10,68 +17,83 @@ const HomeScreen = () => {
           style={styles.avatar}
           source={require('../assets/images/userProfile.jpg')}
         />
+        <Text style={{fontSize: 30, fontWeight: 'bold', color: '#fff'}}>
+          Ryan Hardin
+        </Text>
       </View>
       <View style={styles.body}>
-        <Text style={styles.name}>Roderick Smith</Text>
-        <View style={styles.bodyContent}>
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <Ionicons
-              name="ios-information-circle-outline"
-              size={32}
-              color="green"
-              style={{paddingVertical: 15}}
-            />
-            <Text style={styles.text}>Medical Details</Text>
+        <ScrollView>
+          <View style={styles.group}>
+            <View style={styles.titles}>
+              <Ionicons
+                style={styles.icons}
+                name="ios-information-circle-outline"
+                size={32}
+                color="green"
+              />
+              <Text style={styles.titleHeaders}>Medical Details</Text>
+            </View>
+            <TouchableOpacity>
+              <Text style={styles.button}>Health Profile</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={styles.button}>Medical Id</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={styles.button}>Previous Scores</Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white'}}>Health Profile</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white'}}>Medical ID</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white'}}>Previous Scores</Text>
-          </TouchableOpacity>
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <Ionicons
-              name="ios-person"
-              size={32}
-              color="green"
-              style={{paddingVertical: 15}}
-            />
-            <Text style={styles.text}>Account</Text>
+          <View style={styles.group}>
+            <View style={styles.titles}>
+              <Ionicons
+                style={styles.icons}
+                name="ios-person"
+                size={32}
+                color="green"
+              />
+              <Text style={styles.titleHeaders}>Account</Text>
+            </View>
+            <TouchableOpacity>
+              <Text style={styles.button}>Health Records</Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white'}}>Health Records</Text>
-          </TouchableOpacity>
-          <View style={{flex: 1, flexDirection: 'row'}}>
-            <Ionicons
-              name="ios-hand"
-              size={32}
-              color="green"
-              style={{paddingVertical: 15}}
-            />
-            <Text style={styles.text}>Privacy</Text>
+          <View style={styles.group}>
+            <View style={styles.titles}>
+              <Ionicons
+                style={styles.icons}
+                name="ios-hand"
+                size={32}
+                color="green"
+              />
+              <Text style={styles.titleHeaders}>Privacy</Text>
+            </View>
+            <TouchableOpacity>
+              <Text style={styles.button}>Apps</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={styles.button}>Devices</Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white'}}>Apps</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={{color: 'white'}}>Devices</Text>
-          </TouchableOpacity>
-        </View>
+        </ScrollView>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#36485f',
-    flex: 1,
-  },
   container: {
     flex: 1,
+  },
+  header: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: '#36485f',
+  },
+
+  body: {
+    flex: 2,
   },
   avatar: {
     width: 130,
@@ -81,36 +103,31 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     marginBottom: 10,
     alignSelf: 'center',
-    position: 'absolute',
-    marginTop: 80,
   },
-  name: {
-    fontSize: 40,
-    alignItems: 'center',
-    height: 45,
-    fontWeight: 'bold',
+
+  titles: {
+    flexDirection: 'row',
   },
-  body: {
-    margin: 50,
-    alignItems: 'center',
-    flex: 3,
+  icons: {
+    paddingRight: 5,
   },
-  bodyContent: {
-    flex: 1,
-    width: '100%',
-    marginTop: 20,
-  },
-  text: {
+  titleHeaders: {
+    paddingTop: 5,
     fontSize: 20,
-    marginTop: 20,
-    paddingLeft: 10,
+  },
+  group: {
+    margin: 10,
   },
   button: {
-    backgroundColor: 'grey',
-    borderRadius: 5,
+    backgroundColor: '#ccc',
+    fontSize: 20,
+    margin: 5,
     padding: 10,
-    marginTop: 5,
   },
 });
+
+HomeScreen.navigationOptions = {
+  title: 'Home',
+};
 
 export default HomeScreen;
