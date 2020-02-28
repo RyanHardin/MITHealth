@@ -15,7 +15,7 @@ const HomeScreen = () => {
       <View style={styles.header}>
         <Image
           style={styles.avatar}
-          source={require('../assets/images/userProfile.jpg')}
+          source={require ('../assets/images/userProfile.jpg')}
         />
         <Text style={{fontSize: 30, fontWeight: 'bold', color: '#fff'}}>
           Ryan Hardin
@@ -80,7 +80,7 @@ const HomeScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
   container: {
     flex: 1,
   },
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
 });
 
 HomeScreen.navigationOptions = {
-  title: 'Home',
+  title: '',
 };
 
 export default HomeScreen;

@@ -8,12 +8,11 @@ import ExerciseScreen from '../screens/ExerciseScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ProgressScreen from '../screens/ProgressScreen';
 
-const config = Platform.select({
-  web: {headerMode: 'screen'},
-  default: {},
+const config = Platform.select ({
+  default: {headerMode: 'none', header: 'none'},
 });
 
-const HomeStack = createStackNavigator(
+const HomeStack = createStackNavigator (
   {
     Home: HomeScreen,
   },
@@ -36,7 +35,7 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const ProgressStack = createStackNavigator(
+const ProgressStack = createStackNavigator (
   {
     Progress: ProgressScreen,
   },
@@ -59,7 +58,7 @@ ProgressStack.navigationOptions = {
 
 ProgressStack.path = '';
 
-const ExerciseStack = createStackNavigator(
+const ExerciseStack = createStackNavigator (
   {
     Exercises: ExerciseScreen,
   },
@@ -78,7 +77,7 @@ ExerciseStack.navigationOptions = {
 
 ExerciseStack.path = '';
 
-const SettingsStack = createStackNavigator(
+const SettingsStack = createStackNavigator (
   {
     Settings: SettingsScreen,
   },
@@ -97,7 +96,7 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
-const tabNavigator = createBottomTabNavigator({
+const tabNavigator = createBottomTabNavigator ({
   HomeStack,
   ExerciseStack,
   ProgressStack,
