@@ -1,20 +1,34 @@
 import React, {useState} from 'react';
-import {View, Text, Button, StyleSheet, TextInput} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
+import {Button} from 'react-native-elements';
 
 const Login = ({navigation}) => {
   const [user, setUser] = useState ('');
   const [passWord, setPassword] = useState ('');
+  const [error, setError] = useState ('');
 
   const login = () => {
-    console.log (`The username/Email: ${user}`);
-    console.log (`The password: ${passWord}`);
-    navigation.navigate ('Home');
+    if (user != '' && passWord != '') {
+      console.log (`The username/Email: ${user}`);
+      console.log (`The password: ${passWord}`);
+      navigation.navigate ('Home');
+    } else {
+      setError ('Please insert correct usename or password');
+      console.log ('Please enter username or password');
+    }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.greeting}>{`Hello Again.\nWelcome back`}</Text>
-      <View style={{width: 300}}>
+      <Text style={styles.greeting}>{`Hello Again,\nWelcome back`}</Text>
+      <Text style={{padding: 15, color: 'red'}}>{error}</Text>
+      <View style={{width: 400}}>
         <TextInput
           style={styles.input}
           placeholder="Username/Email"
@@ -29,29 +43,46 @@ const Login = ({navigation}) => {
           value={passWord}
         />
       </View>
-      <Button title={'Login'} onPress={login} />
-      <Button title={'Sign Up'} onPress={() => console.log ()} />
+      <Button
+        title={'Sign In'}
+        onPress={login}
+        style={{width: 350, padding: 5}}
+      />
+
+      <TouchableOpacity style={{padding: 10}}>
+        <Text>
+          New to Vulcan Grip?
+          <Text
+            style={{fontWeight: 'bold', color: 'rgb(41, 139, 217)'}}
+            onPress={() => navigation.navigate ('Register')}
+          >
+            {' '} Sign Up
+          </Text>
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 Login.navigationOptions = {
-  title: 'Vulcan Grip',
+  title: '',
 };
 
 const styles = StyleSheet.create ({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    padding: 50,
     alignItems: 'center',
     backgroundColor: '#fff',
   },
   greeting: {
     textAlign: 'center',
-    fontSize: 35,
+    fontSize: 20,
   },
   input: {
     height: 40,
+    margin: 20,
+    paddingBottom: 10,
     borderBottomColor: 'grey',
     borderBottomWidth: 0.5,
   },

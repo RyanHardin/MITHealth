@@ -9,8 +9,8 @@ const SignUp = () => {
   );
 };
 
-Login.navigationOptions = {
-  title: 'Login',
+SignUp.navigationOptions = {
+  title: '',
 };
 
 const styles = StyleSheet.create ({
@@ -20,3 +20,5 @@ const styles = StyleSheet.create ({
     backgroundColor: '#fff',
   },
 });
+
+export default SignUp;
