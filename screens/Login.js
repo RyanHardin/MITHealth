@@ -15,12 +15,9 @@ const Login = ({navigation}) => {
 
   const login = () => {
     if (user != '' && passWord != '') {
-      console.log (`The username/Email: ${user}`);
-      console.log (`The password: ${passWord}`);
       navigation.navigate ('Home');
     } else {
       setError ('Please insert correct usename or password');
-      console.log ('Please enter username or password');
     }
   };
 

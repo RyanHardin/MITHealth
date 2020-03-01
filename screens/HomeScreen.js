@@ -15,7 +15,7 @@ const HomeScreen = () => {
       <View style={styles.header}>
         <Image
           style={styles.avatar}
-          source={require ('../assets/images/userProfile.jpg')}
+          source={require ('../assets/images/defaultimg.jpeg')}
         />
         <Text style={{fontSize: 30, fontWeight: 'bold', color: '#fff'}}>
           Ryan Hardin
