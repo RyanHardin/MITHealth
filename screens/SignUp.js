@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import React from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
 
 const SignUp = () => {
   return (
@@ -10,14 +10,14 @@ const SignUp = () => {
 };
 
 SignUp.navigationOptions = {
-  title: '',
+  title: "",
 };
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });
 

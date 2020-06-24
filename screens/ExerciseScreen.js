@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
 import { Card } from "react-native-material-ui";
 
-export default function ExerciseScreen() {
+const ExerciseScreen = () => {
   const images = [
     require("./../assets/images/airhockey.png"),
     require("./../assets/images/pool.jpeg"),
@@ -25,7 +25,7 @@ export default function ExerciseScreen() {
       <Text>Exercise</Text>
     </View>
   );
-}
+};
 
 ExerciseScreen.navigationOptions = {
   title: "Exercises",
@@ -43,3 +43,5 @@ const styles = StyleSheet.create({
     height: 150,
   },
 });
+
+export default ExerciseScreen;

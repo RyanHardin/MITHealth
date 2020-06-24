@@ -1,9 +1,9 @@
-import React from 'react';
-import {View, ScrollView, Text, StyleSheet} from 'react-native';
-import Chart from '../components/ProgressChart/Chart';
-import List from '../components/ProgressChart/ListItems';
+import React from "react";
+import { View, ScrollView, Text, StyleSheet } from "react-native";
+import Chart from "../components/ProgressChart/Chart";
+import List from "../components/ProgressChart/ListItems";
 
-export default function ProgressScreen() {
+const ProgressScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.chartContainer}>
@@ -14,15 +14,15 @@ export default function ProgressScreen() {
       </View>
     </View>
   );
-}
+};
 
 ProgressScreen.navigationOptions = {
-  title: 'Progress',
+  title: "Progress",
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
+    flexDirection: "column",
     flex: 1,
   },
 
@@ -32,8 +32,10 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     flex: 2,
-    backgroundColor: 'rgb(27, 33, 44)',
-    justifyContent: 'center',
-    alignItems: 'stretch',
+    backgroundColor: "rgb(27, 33, 44)",
+    justifyContent: "center",
+    alignItems: "stretch",
   },
 });
+
+export default ProgressScreen;
