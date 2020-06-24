@@ -1,6 +1,5 @@
 import React from "react";
 import { View, StyleSheet, Text, Image, TouchableOpacity } from "react-native";
-import { Card } from "react-native-material-ui";
 
 const ExerciseScreen = () => {
   const images = [
